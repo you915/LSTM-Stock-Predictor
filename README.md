@@ -74,7 +74,7 @@ Finally, use the testing data to evaluate each model and compare the performance
 
 > Which model has a lower loss?
 
-* Evaludate the model using the X_test and y_test data. Closing Price model has a lower loss (0.0232) than FNG model (0.0761)
+* Evaludate the model using the X_test and y_test data. Closing Price model has a lower loss (0.0242) than FNG model (0.0842)
 
 ![performance](Images/performance.JPG)
 
