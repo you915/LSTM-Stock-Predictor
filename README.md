@@ -22,9 +22,9 @@ You will need to:
 
 - - -
 
-## Instructions
+# Instructions
 
-### Prepare the data for training and testing
+# Prepare the data for training and testing
 
 Use the starter code as a guide to create a Jupyter Notebook for each RNN. The starter code contains a function to create the window of time for the data in each dataset.
 
@@ -32,29 +32,65 @@ For the Fear and Greed model, you will use the FNG values to try and predict the
 
 For the closing price model, you will use previous closing prices to try and predict the next closing price. A function is provided in the notebook to help with this.
 
+![window_data](Images/window_data.JPG)
+
+## FNG Values used to predict future closing prices
+![predict_closing_0](Images/predict_closing_price.JPG)
+
+## Past closing prices used to predict future closing prices
+![predict_closing_1](Images/predict_closing_price_1.JPG)
+
 Each model will need to use 70% of the data for training and 30% of the data for testing.
 
-Apply a MinMaxScaler to the X and y values to scale the data for the model.
+## Apply a MinMaxScaler to the X and y values to scale the data for the model.
+
+![min_max_scaler](Images/min_max_scaler.JPG)
 
 Finally, reshape the X_train and X_test values to fit the model's requirement of samples, time steps, and features. (*example:* `X_train = X_train.reshape((X_train.shape[0], X_train.shape[1], 1))`)
 
-### Build and train custom LSTM RNNs
+## Finally, reshape the X_train and X_test values to fit the model's requirements
+![reshape](Images/reshaped.JPG)
+
+# Build and train custom LSTM RNNs
 
 In each Jupyter Notebook, create the same custom LSTM RNN architecture. In one notebook, you will fit the data using the FNG values. In the second notebook, you will fit the data using only closing prices.
-
 Use the same parameters and training steps for each model. This is necessary to compare each model accurately.
 
-### Evaluate the performance of each model
+## Notebook created to fit data using FNG and closing prices
+![LSTM_RNNS](Images/LSTM_RNNS.JPG)
+
+## Evaluate the performance of each model
 
 Finally, use the testing data to evaluate each model and compare the performance.
 
-Use the above to answer the following:
+![fng_prediction](Images/fng_prediction.JPG)
+![fng_index_graph](Images/fng_index.JPG)
+
+![closing_prediction](Images/closing_prediction.JPG)
+![closing_price_graph](Images/closing_price.JPG)
+
+## Use the above to answer the following:
+
 
 > Which model has a lower loss?
->
+
+* Evaludate the model using the X_test and y_test data. Closing Price model has a lower loss (0.0232) than FNG model (0.0761)
+
+![performance](Images/performance.JPG)
+
 > Which model tracks the actual values better over time?
->
+
+* Closing Prices model tracks the actual values better over time
+
+![fng_prediction](Images/fng_prediction.JPG)
+![closing_prediction](Images/closing_prediction.JPG)
+
 > Which window size works best for the model?
+
+* After a series of simulation, window size = 1 works best for the model
+
+![fng_prediction](Images/fng_window_size_1.JPG)
+![closing_prediction](Images/closing_window_size_1.JPG)
 
 - - -
 
